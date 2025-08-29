@@ -2,10 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Custome Toast" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Kotlin" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Menus" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Splash Screen" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Toast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01_Kotlin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/02_Toast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/03_Custome Toast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/07_Menus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/08_Splash Screen" vcs="Git" />
   </component>
 </project>
