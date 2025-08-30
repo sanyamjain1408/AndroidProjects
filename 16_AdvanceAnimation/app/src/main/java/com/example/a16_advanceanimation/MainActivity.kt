@@ -10,10 +10,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val animationView = findViewById<LottieAnimationView>(R.id.lottie_view)
-        animationView.setAnimation("piggy.json") // assets folder se load karega
-        animationView.repeatCount = LottieDrawable.INFINITE
-        animationView.playAnimation()
+        val animationView1 = findViewById<LottieAnimationView>(R.id.lottie_view1)
+        animationView1.setAnimation("piggy.json") // assets folder se load karega
+        animationView1.repeatCount = LottieDrawable.INFINITE
+        animationView1.playAnimation()
+
+        val animationView2 = findViewById<LottieAnimationView>(R.id.lottie_view2)
+        animationView2.setAnimation("Login.json") // assets folder se load karega
+        animationView2.repeatCount = LottieDrawable.INFINITE
+        animationView2.playAnimation()
 
     }
 }
