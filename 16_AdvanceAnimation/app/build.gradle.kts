@@ -47,5 +47,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //lottie
-    implementation("com.github.LottieFiles:dotlottie-android:0.4.1")
+    implementation("com.airbnb.android:lottie:6.4.0")
+
 }
