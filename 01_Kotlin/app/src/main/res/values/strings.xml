@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ViewAttributesUnderstandingActivity</string>
+    <string name="my_name_is_sanyam_jain">My name is Sanyam Jain !</string>
+    <string name="sign_up_image">Sign Up image</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="sign_up">Sign Up</string>
+</resources>

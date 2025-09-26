@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+=======
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01_Kotlin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/02_Toast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/03_Custome Toast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/07_Menus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/08_Splash Screen" vcs="Git" />
+>>>>>>> d752a2c3c8fbd64d7728e675aae1c0ba14124a31
   </component>
 </project>
