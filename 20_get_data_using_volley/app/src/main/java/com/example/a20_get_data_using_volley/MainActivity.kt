@@ -1,47 +1,48 @@
 package com.example.a20_get_data_using_volley
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.a20_get_data_using_volley.ui.theme._20_get_data_using_volleyTheme
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.google.gson.GsonBuilder
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    var url = "https://api.github.com/users"
+    private var userinformationItem = arrayListOf<userinformationItem>()
+    var userinformation = userinformation()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            _20_get_data_using_volleyTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+        setContentView(R.layout.activity_main)
+
+        val stringRequest = StringRequest(url, Response.Listener {
+
+            val gsonBuilder = GsonBuilder()
+            val gson = gsonBuilder.create()
+            val userArray = gson.fromJson(it, Array<userinformationItem>::class.java)
+
+            userinformationItem.clear()
+            userinformationItem.addAll(userArray.toList())
+
+            userinformationItem.forEach { item ->
+                userinformation.add(item)
             }
-        }
-    }
-}
+            Toast.makeText(this, userinformation.toString(), Toast.LENGTH_SHORT).show()
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        }, Response.ErrorListener {
+            Toast.makeText(this@MainActivity, "Something went wrong"+it.toString(), Toast.LENGTH_SHORT).show()
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    _20_get_data_using_volleyTheme {
-        Greeting("Android")
+        })
+
+        val volleyQueue = Volley.newRequestQueue(this)
+        volleyQueue.add(stringRequest)
+
+
     }
 }
